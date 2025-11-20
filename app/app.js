@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const userRouter = require('../user/userRouter');
+const { connect } = require('../db/db');
 const app = express();
 
 app.use(express.json());
@@ -28,5 +29,7 @@ app.use((error, req, res, next) => {
     status: error.status || 500,
   });
 });
+
+connect();
 
 module.exports = app;
