@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const userRouter = require('../user/userRouter');
+const bookRouter = require('../user/bookRouter');
 const { connect } = require('../db/db');
 const app = express();
 
@@ -15,7 +15,7 @@ app.get('/', (req, res, next) => {
   next();
 });
 
-app.use('/users', userRouter);
+app.use('/users', bookRouter);
 
 app.use((req, res, next) => {
   const error = new Error('Not Found');

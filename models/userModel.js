@@ -4,6 +4,7 @@ const userSchema = mongoose.Schema({
   // id, firstNsmem lastName,address, city, state, zip,email, password
 
   _id: mongoose.Schema.Types.ObjectId,
+
   firstName: {
     type: String,
     required: true,
